@@ -9,6 +9,7 @@ namespace testeCNJ
         {
             // 0033739-92.1999.8.26.0100 -- ok
             // 1016768-15.1999.8.26.0100 -- erro com valores maiores que Long
+            // 5006601-96.2012.4.04.7200
 
             if (args.Length == 0)
                 throw new Exception("Informa o número do processo");
@@ -30,23 +31,28 @@ namespace testeCNJ
                 n.Substring(16, 4)  // Unidade de origem
             );
 
-            string c = processo.Item1 + processo.Item3 + processo.Item4 + processo.Item5 + processo.Item6 + "00";
+            UInt64.TryParse(processo.Item1, out UInt64 p1);
+
+            string resto1 = (p1 % 97).ToString();
+
+            UInt64.TryParse($"{resto1}{processo.Item3}{processo.Item4}{processo.Item5}", out UInt64 p2);
+
+            string resto2 = (p2 % 97).ToString();
+
+            string c = $"{resto2}{processo.Item6}00";
             
-            System.UInt64 s;
-            System.UInt64.TryParse(c, out s);
+            UInt64.TryParse(c, out UInt64 s);
+            UInt64.TryParse(processo.Item2, out UInt64 d);
 
             Console.WriteLine($"Concat-str: {c}");
             Console.WriteLine($"Concat-int: {s}");
 
-            System.UInt64 digito;
-            System.UInt64.TryParse(processo.Item2, out digito);
-
             var r = 98 - (s % 97);
 
-            Console.WriteLine($"Resultado: {digito} == {r}");
+            Console.WriteLine($"Resultado: {d} == {r}");
 
-            if (digito == r)
-                Console.WriteLine(" -- válido -- ");
+            if (d == r)
+                Console.WriteLine("Válido *** ");
         }
     }
 }
