@@ -1,0 +1,33 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Resources\email_confirmar_cadastro_en_us.html" />
+    <None Remove="Resources\email_confirmar_cadastro_pt_br.html" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\email_confirmar_cadastro_en_us.html" />
+    <EmbeddedResource Include="Resources\email_confirmar_cadastro_pt_br.html" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="autoMapper" Version="8.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\demo.ethm.Dominio\demo.ethm.Dominio.csproj" />
+    <ProjectReference Include="..\demo.ethm.Infraestrutura.Persistencia\demo.ethm.Infraestrutura.Persistencia.csproj" />
+    <ProjectReference Include="..\demo.ethm.Infraestrutura\demo.ethm.Infraestrutura.csproj" />
+  </ItemGroup>
+
+  <!--ItemGroup>
+    <Reference Include="Microsoft.Extensions.FileProviders.Embedded">
+      <HintPath>C:\Program Files\dotnet\sdk\NuGetFallbackFolder\microsoft.extensions.fileproviders.embedded\2.2.0\lib\netstandard2.0\Microsoft.Extensions.FileProviders.Embedded.dll</HintPath>
+    </Reference>
+  </ItemGroup-->
+
+</Project>
