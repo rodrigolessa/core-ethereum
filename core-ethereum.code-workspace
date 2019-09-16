@@ -1,0 +1,32 @@
+{
+	"folders": [
+		{
+			"path": "demo.ethm.Dominio"
+		},
+		{
+			"path": "demo.ethm.Dominio.Tests"
+		},
+		{
+			"path": "demo.ethm.Infraestrutura"
+		},
+		{
+			"path": "demo.ethm.Infraestrutura.Persistencia"
+		},
+		{
+			"path": "demo.ethm.Infraestrutura.Tests"
+		},
+		{
+			"path": "demo.ethm.Aplicacao"
+		},
+		{
+			"path": "demo.ethm.Aplicacao.Tests"
+		},
+		{
+			"path": "demo.ethm.WebApi"
+		},
+		{
+			"path": "demo.ethm.ui.web"
+		}
+	],
+	"settings": {}
+}

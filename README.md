@@ -3,6 +3,11 @@
 A Study case for implement concepts of DDD and create a wrapper of ethereum api.
 
 # Getting Started
+
+```shel
+dotnet new web -n demo.ethm.ui.web --framework netcoreapp2.2 -lang C#
+```
+
 TODO: Guide users through getting your code up and running on their own system. In this section you can talk about:
 1.	Installation process
 2.	Software dependencies
